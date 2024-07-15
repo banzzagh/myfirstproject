@@ -1,0 +1,84 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+    font-family: 'Kanit', sans-serif;
+}
+
+.top {
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 16px;
+}
+
+.navbar:hover {
+    background-color: white;
+    color: black;
+}
+
+.button {
+    padding: 8px 16px;
+    text-decoration: none;
+    color: inherit;
+    text-align: center;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #ccc;
+}
+
+.content {
+    max-width: 1100px;
+    text-align: center;
+    padding: 0 16px;
+    margin: auto;
+}
+
+.row {
+    padding: 64px 0;
+}
+
+footer {
+    padding: 32px 0;
+    text-align: center;
+    background-color: #f1f1f1;
+}
+
+.smallmenu {
+    display: flex;
+    gap: 10px;
+}
+
+.smallmenu a {
+    display: inline-block;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .smallmenu {
+        display: none;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .smallmenu.open {
+        display: flex;
+    }
+
+    .navbar:hover .smallmenu {
+        display: flex;
+    }
+}
